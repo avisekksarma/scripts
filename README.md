@@ -1,2 +1,2 @@
 # scripts
-A collection of scripts to help me in many usecases
+A collection of scripts to which are helpful in many usecases
