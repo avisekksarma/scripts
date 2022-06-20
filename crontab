@@ -1,2 +1,2 @@
 #m h dom mon dow command
-*/20 * * * * sh /home/abhishek/scripts/battery-manager.sh >/dev/null 2>&1
+*/10 * * * * sh /home/abhishek/scripts/battery-manager.sh >/dev/null 2>&1

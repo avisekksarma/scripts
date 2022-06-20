@@ -7,7 +7,7 @@ upper_limit=80
 path="/sys/class/power_supply/BAT0/"
 battery="$(cat $path/capacity)"
 status="$(cat $path/status)"
-if [[ "$battery" -gt 98 && "$status" == "Charging" ]]; then
+if [[ "$battery" -gt 98 && "$status" == "Charging" || "$status" == "Full" ]]; then
     XDG_RUNTIME_DIR=/run/user/$(id -u) notify-send -i $path_img -t $time_limit "Battery fully charged" "Unplug power"
     elif [[ "$battery" -gt "$upper_limit" && "$status" == "Charging" ]]; then
     XDG_RUNTIME_DIR=/run/user/$(id -u) notify-send -i $path_img -t $time_limit  "Battery beyond current limit of $upper_limit" "Unplug power"
